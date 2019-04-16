@@ -8,6 +8,16 @@ function runScript() {
       this.value + postfix
     );
   }
-  inputs.forEach(input => input.addEventListener("change", changeValue));
-  inputs.forEach(input => input.addEventListener("mousemove", changeValue));
+
+  eventListeners();
+  function eventListeners() {
+    inputs.forEach(function(input) {
+      if (input.name === "paddingLeft" || input.name === "paddingRight")
+        input.addEventListener("change", changeValue);
+      else {
+        input.addEventListener("change", changeValue);
+        input.addEventListener("mousemove", changeValue);
+      }
+    });
+  }
 }
