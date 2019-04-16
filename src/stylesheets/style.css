@@ -5,13 +5,16 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
 }
 :root {
   --bg1: #7a5c5c;
   --bg2: #02a7e9;
   --bg2br: 0px;
   --blur: 1;
+  --paddingTop: 0px;
+  --paddingBot: 0px;
+  --paddingLeft: 0px;
+  --paddingRight: 0px;
 }
 input[type="color"] {
   border: 2px solid black;
@@ -23,6 +26,7 @@ input[type="color"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--padding);
 }
 
 .background2 {
